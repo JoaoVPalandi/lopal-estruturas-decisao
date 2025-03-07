@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de adivinhação</title>
+</head>
+
+<body>
+    <script>
+      // O computador pensa em um número aleatório entre 1 e 100
+let numeroAleatorio = Math.random() * 100; 
+let numeroAleatorioInteiro = Math.round(numeroAleatorio); // Arredonda para o inteiro mais próximo
+
+// O jogador tenta adivinhar o número
+let palpite = prompt("Tente adivinhar o número que pensei entre 1 e 100:");
+
+// Verifica se o número digitado é igual ao número aleatório
+if (palpite == numeroAleatorioInteiro) {  // Compara diretamente como string
+  document.write("Parabéns! Você acertou! O número era " + numeroAleatorioInteiro);
+} else {
+  document.write("Você errou! Eu pensei no número " + numeroAleatorioInteiro);
+}
+
+    </script>
+</body>
+
+</html>
