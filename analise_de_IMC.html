@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analise de IMC</title>
+</head>
+
+<body>
+    <script>
+        //obter altura em metros e peso em quilogramas do usuario
+        //calcumar o IMC = peso/(altura * altura)
+        //Verificar se o IMC está no intervalo entr 18.5 e 35
+        //se estiver nesse intervelo exibir o IMC e dar os parabéns para o usuário
+        //se estiver abaixo de 18.5 exibir "seu IMC indica que você abaixo do peso!"
+        //se estiver acima de 35 axibir "seu IMC indica que você está acima do peso!"
+        //depois de escrito o o programa, atualize seu repositório remoto e envie o link pela tarefa.
+
+        // Função para calcular o IMC
+        function calcularIMC(peso, altura) {
+            return (peso / (altura * altura)).toFixed(1); // arredondando o IMC
+                                                        //  para uma casa decimal
+        }
+
+        // Obter a altura em metros e peso em quilogramas do usuário
+        let weight = prompt("Digite seu peso em quilogramas:");
+        let height = prompt("Digite sua altura em metros:");
+
+        // Converter os valores de texto para número diretamente
+        weight = weight - 0; // Conversão implícita para número
+        height = height - 0; // Conversão implícita para número
+
+        // Calcular o IMC
+        let IMC = calcularIMC(weight, height);
+
+        // Verificar a categoria do IMC
+        if (IMC >= 18.5 && IMC <= 35) {
+            console.log("Parabéns! Seu IMC " + IMC + ", é saudável.");
+            document.write("Parabéns! Seu IMC " + IMC + ", é saudável.");
+        } else if (IMC < 18.5) {
+            console.log("Seu IMC indica que você está abaixo do peso!");
+            document.write("Seu IMC indica que você está abaixo do peso!");
+        } else if (IMC > 35) {
+            console.log("Seu IMC indica que você está acima do peso!");
+            document.write("Seu IMC indica que você está acima do peso!");
+        }
+
+    </script>
+</body>
+
+</html>
